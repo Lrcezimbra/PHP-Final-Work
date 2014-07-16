@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastro</title>
+	</head>
+
+	<body>
+    	<fieldset><legend>Cadastro</legend>
+        	<form action="../controle/clientecontrole.php" method="post">
+            	<label>Nome: </label><input type="text" name="txtNome" placeholder="Nome"/><br />
+                <label>Raz&atilde;o Social: </label><input type="text" name="txtRazaoSocial" placeholder="Raz&atilde;o Social"/><br />
+                <label>CNPJ: </label><input type="teste" name="txtCnpj" placeholder="CNPJ"/><br />
+                <label>Endere&ccedil;o: </label><input type="text" name="txtEndereco" placeholder="Endere&ccedil;o"/><br />
+                <label>Telefone 1: </label><input type="tel" name="telTelefone1" placeholder="Telefone 1"/><br />
+                <label>Telefone 2: </label><input type="tel" name="telTelefone2" placeholder="Telefone 2"/><br />
+                <label>Email: </label><input type="email" name="email" placeholder="Email"/><br />
+                <label>Site: </label><input type="url" name="urlSite" placeholder="Site"/><br />
+                <label>Observações: </label><br />
+                <textarea name="txtObs"></textarea>
+                <br />
+                <input type="submit" class="button" value="Cadastrar" />
+                <input type="reset" class="button" value="Limpar" />
+			</form>
+        </fieldset>
+	</body>
+</html>
