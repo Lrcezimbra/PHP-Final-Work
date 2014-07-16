@@ -19,7 +19,7 @@ class Validacao{
 		}//fecha else
 	}//fecha validarRazaoSocial
 	
-	public static function isCnpjValid($cnpj){
+	public static function validarCnpj($cnpj){
 		//Etapa 1: Cria um array com apenas os digitos numéricos, isso permite receber o cnpj em diferentes formatos como "00.000.000/0000-00", "00000000000000", "00 000 000 0000 00" etc...
 		$j=0;
 		for($i=0; $i<(strlen($cnpj)); $i++){

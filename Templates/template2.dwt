@@ -5,10 +5,10 @@
         <title>Sistema do Lucas</title>
         <link rel="stylesheet" href="../estilo/style.css" type="text/css" media="all" />
         <script>
-			function deletarCliente(idCliente,nome) {
-				var ask = window.confirm("Tem certeza que deseja deletar o cliente " + nome + "?");
+			function deletarEvento(idEvento,nome) {
+				var ask = window.confirm("Tem certeza que deseja deletar o evento " + nome + "?");
 				if (ask) {
-					document.location.href = '../controle/clientecontrole.php?op=deletar&idCliente='+idCliente;
+					document.location.href = '../controle/eventocontrole.php?op=deletar&idEvento='+idEvento;
 				}
 			}
 		</script>
@@ -36,12 +36,10 @@
             <!-- Main Nav -->
             <div id="navigation">
                 <ul>
-                  <!-- TemplateBeginEditable name="Menu" -->
                     <li><a href="guihome.html"><span>Home</span></a></li>
-                    <li><a href="guicadcliente.php" class="active"><span>Clientes</span></a></li>
+                    <li><a href="guicadcliente.php"><span>Clientes</span></a></li>
                     <li><a href="guicadfuncionario.html"><span>Funcionários</span></a></li>
-                    <li><a href="guieventos.html"><span>Eventos</span></a></li>
-                  <!-- TemplateEndEditable -->
+                    <li><a href="guieventos.php" class="active"><span>Eventos</span></a></li>
                 </ul>
           </div>
             <!-- End Main Nav -->
@@ -60,77 +58,75 @@
                 
                 <!-- Content -->
                 <div id="content">
-                    
-                    <!-- Box -->
-                    <div class="box">
-                        <!-- Box Head -->
-                        <div class="box-head">
-                            <h2 class="left">Clientes</h2>
-                            <div class="right">
-                                <label>Pesquisar</label>
-                                <input type="text" class="field small-field" />
-                                <input type="submit" class="button" value="search" />
-                            </div>
-                        </div>
-                        <!-- End Box Head -->	
-    
-                        <!-- Table -->
-                        <div class="table">
-                            <table>
-                            	<thead>
-                                	<tr>
-                                        <th>Nome</th>
-                                        <th>Razão Social</th>
-                                        <th>Telefone</th>
-                                        <th>Telefone</th>
-                                        <th>Email</th>
-                                        <th>Site</th>
-                                        <th>Controle</th>
-									</tr>
-                                </thead>
-                                <tfoot>
-									<tr>
-                                        <th>Nome</th>
-                                        <th>Razão Social</th>
-                                        <th>Telefone</th>
-                                        <th>Telefone</th>
-                                        <th>Email</th>
-                                        <th>Site</th>
-                                        <th>Controle</th>
-									</tr>
-                                </tfoot>
-                                <tbody>
-									<?php
-									include '../dao/clientedao.class.php';
-									
-									$cliDAO = new ClienteDAO();
-									$dados = array();
-									$dados = $cliDAO->listarCliente();
-									
-									foreach($dados as $c){
-										echo '<tr>';
-											echo '<td><a href="guidetalhes.php?idCliente='.$c->idCliente.'">'.$c->nome.'</a></td>';
-											echo '<td>'.$c->razaoSocial.'</td>';
-											echo '<td>'.$c->telefone1.'</td>';
-											echo '<td>'.$c->telefone2.'</td>';
-											echo '<td>'.$c->email.'</td>';
-											echo '<td>'.$c->site.'</td>';
-											echo '<td><a onclick=\'deletarCliente('.$c->idCliente.',"'.$c->nome.'")\' class=\'ico del\'>Excluir</a>';
-											echo '<a href="'."guieditcliente.php?idCliente=$c->idCliente".'" class="ico edit">Editar</a></td>';
-										echo '</tr>';
-									}//fecha foreach
-									
-                                    ?>
-								</tbody>
-                          </table>
-                        
-                        </div>
-                        <!-- Table -->
-                        
+					<!-- Box -->
+                  <div class="box">
+                    <!-- Box Head -->
+                    <div class="box-head">
+                      <h2 class="left">Eventos</h2>
+                      <div class="right">
+                        <label>Pesquisar</label>
+                        <input type="text" class="field small-field" />
+                        <input type="submit" class="button" value="search" />
+                      </div>
                     </div>
-                    <!-- End Box -->
-                    
-                    <!-- Box -->
+                    <!-- End Box Head -->
+                    <!-- Table -->
+                    <div class="table">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Nome</th>
+                            <th>Descri&ccedil;&atilde;o</th>
+                            <th>Local</th>
+                            <th>Data</th>
+                            <th>Hor&aacute;rio</th>
+                            <th>Observa&ccedil;&atilde;o</th>
+                            <th>Controle</th>
+                          </tr>
+                        </thead>
+                        
+                        <tfoot>
+                          <tr>
+                            <th>Nome</th>
+                            <th>Descri&ccedil;&atilde;o</th>
+                            <th>Local</th>
+                            <th>Data</th>
+                            <th>Hor&aacute;rio</th>
+                            <th>Observa&ccedil;&atilde;o</th>
+                            <th>Controle</th>
+                          </tr>
+                        </tfoot>
+                        
+                        <tbody>
+                        	<?php
+								include '../dao/eventodao.class.php';
+								
+								$evDAO = new EventoDAO();
+								$dados = array();
+								$dados = $evDAO->listarEvento();
+								
+								foreach($dados as $c){
+									echo '<tr>';
+										echo '<td><a href="guidetalhesevento.php?idEvento='.$c->idEvento.'">'.$c->nome.'</a></td>';
+										echo '<td>'.$c->descricao.'</td>';
+										echo '<td>'.$c->local.'</td>';
+										echo '<td>'.$c->data.'</td>';
+										echo '<td>'.$c->horario.'</td>';
+										echo '<td>'.$c->obs.'</td>';
+										echo '<td><a onclick=\'deletarEvento('.$c->idEvento.',"'.$c->nome.'")\' class=\'ico del\'>Excluir</a>';
+										echo '<a href="'."guieditevento.php?idEvento=$c->idEvento".'" class="ico edit">Editar</a></td>';
+									echo '</tr>';
+								}//fecha foreach
+								
+								?>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- Table -->
+                  </div>
+                  <!-- End Box -->
+
+                  <!-- Box -->
                     <div class="box">
                         <!-- Box Head -->
                         <!-- TemplateBeginEditable name="Conteudo" -->
@@ -183,7 +179,7 @@
     
                 </div>
                 <!-- End Content -->
-                <div class="cl">&nbsp;</div>			
+              <div class="cl">&nbsp;</div>			
             </div>
             <!-- Main -->
         </div>

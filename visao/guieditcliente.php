@@ -135,25 +135,44 @@
                         <!-- Box Head -->
                         <!-- InstanceBeginEditable name="Conteudo" -->
                         <div class="box-head">
-							<h2>Detalhes do Cliente</h2>
+                            <h2>Editar Cliente</h2>
                         </div>
                         <!-- End Box Head -->
-                        <div class="form">
-                            <p class="detalhes">
-								<?php
-                                include_once '../dao/clientedao.class.php';
-                                    
-                                    $cliDAO = new ClienteDAO();
-                                    $dados = array();
-                                    $dados = $cliDAO->selecionarCliente($_GET['idCliente']);
-                                    
-                                    foreach($dados as $d){
-                                        echo $d;
-                                    }//fecha foreach
-    
-                                ?>
-							</p>
-						</div>
+						<?php
+						echo '<form action="../controle/clientecontrole.php?op=editar&idCliente='.$_GET['idCliente'].'" method="post">
+                           	  <!-- Form -->
+                              <div class="form">';
+							  
+								include_once '../dao/clientedao.class.php';
+								
+								$cliDAO = new ClienteDAO();
+								$dados = array();
+								$dados = $cliDAO->selecionarCliente($_GET['idCliente']);
+								
+								foreach($dados as $d){
+									echo '<label>Nome: </label><input type="text" name="txtNome" placeholder="Nome" class="field size1" value="'.$d->nome.'"/><br />
+									<label>Raz&atilde;o Social: </label><input type="text" name="txtRazaoSocial" placeholder="Raz&atilde;o Social" class="field size1" value="'.$d->razaoSocial.'"/><br />
+									<label>CNPJ: </label><input type="teste" name="txtCnpj" placeholder="CNPJ" class="field size1" value="'.$d->cnpj.'"/><br />
+									<label>Endere&ccedil;o: </label><input type="text" name="txtEndereco" placeholder="Endere&ccedil;o" class="field size1" value="'.$d->endereco.'"/><br />
+									<label>Telefone 1: </label><input type="tel" name="telTelefone1" placeholder="Telefone 1" class="field size1" value="'.$d->telefone1.'"/><br />
+									<label>Telefone 2: </label><input type="tel" name="telTelefone2" placeholder="Telefone 2" class="field size1" value="'.$d->telefone2.'"/><br />
+									<label>Email: </label><input type="email" name="email" placeholder="Email" class="field size1" value="'.$d->email.'"/><br />
+									<label>Site: </label><input type="url" name="urlSite" placeholder="Site" class="field size1" value="'.$d->site.'"/><br />
+									<label>Observações: </label><br />
+									<textarea name="txtObs" class="field size1" rows="10" cols="30">'.$d->obs.'</textarea>';
+								}
+								?>
+                                <br />                  
+                            </div>
+                            <!-- End Form -->
+                            
+                            <!-- Form Buttons -->
+                            <div class="buttons">
+                                <input type="submit" class="button" value="Atualizar" />
+                                <input type="reset" class="button" value="Limpar Mudanças" />
+                            </div>
+                            <!-- End Form Buttons -->
+                        </form>
                       <!-- InstanceEndEditable --></div>
                     <!-- End Box -->
     

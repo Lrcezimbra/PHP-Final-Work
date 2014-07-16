@@ -40,7 +40,7 @@
                     <li><a href="guihome.html"><span>Home</span></a></li>
                     <li><a href="guicadcliente.php" class="active"><span>Clientes</span></a></li>
                     <li><a href="guicadfuncionario.html"><span>Funcionários</span></a></li>
-                    <li><a href="guieventos.html"><span>Eventos</span></a></li>
+                    <li><a href="guieventos.php"><span>Eventos</span></a></li>
                   <!-- InstanceEndEditable -->
                 </ul>
           </div>
@@ -116,7 +116,7 @@
 											echo '<td>'.$c->email.'</td>';
 											echo '<td>'.$c->site.'</td>';
 											echo '<td><a onclick=\'deletarCliente('.$c->idCliente.',"'.$c->nome.'")\' class=\'ico del\'>Excluir</a>';
-											echo '<a href="'."guiedit.php?idCliente=$c->idCliente".'" class="ico edit">Editar</a></td>';
+											echo '<a href="'."guieditcliente.php?idCliente=$c->idCliente".'" class="ico edit">Editar</a></td>';
 										echo '</tr>';
 									}//fecha foreach
 									
