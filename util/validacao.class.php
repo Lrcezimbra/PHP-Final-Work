@@ -70,5 +70,23 @@ class Validacao{
 			return false;			
 		}//fecha else
 	}//fecha validarEmail
+	
+	public static function validarSalario($valor){
+		$exp = '/^(|[0-9]{0,6}(,|.){0,1}[0-9]{0,2})$/';
+		if(preg_match($exp,$valor)){
+			return true;
+		}else{
+			return false;			
+		}//fecha else
+	}//fecha validarSalario
+	
+	public static function validarRg($valor){
+
+		if(preg_match($exp,$valor)){
+			return true;
+		}else{
+			return false;			
+		}//fecha else
+	}//fecha validarRg
 }//fecha classe
 ?>
