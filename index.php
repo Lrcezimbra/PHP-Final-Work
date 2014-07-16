@@ -6,7 +6,7 @@
     
     <body>
     	<fieldset><legend>Login</legend>
-        	<form action="guihome.html" method="post">
+        	<form action="visao/guihome.html" method="post">
             	<label>Login: </label><input type="text" name="txtLogin" placeholder="Login"/><br />
                 <label>Senha: </label><input type="password" name="pwSenha" placeholder="Senha"/><br />
                 

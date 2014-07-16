@@ -1,5 +1,6 @@
 <?php
-include '../modelo/cliente.class.php';
+include_once '../modelo/cliente.class.php';
+include_once '../dao/clientedao.class.php';
 
 $cli = new Cliente();
 
@@ -14,4 +15,7 @@ $cli->site = $_POST['urlSite'];
 $cli->obs = $_POST['txtObs'];
 
 echo $cli;
+
+$cliDAO = new ClienteDAO();
+$cliDAO->cadastrarCliente($cli);
 ?>
