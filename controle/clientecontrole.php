@@ -20,7 +20,7 @@ if(isset($_GET['op'])){
 				$erros[] = 'Razao Social Invalido';
 			}
 			
-			if(!Validacao::validarCnpj($_POST['txtCnpj'])){
+			if(!Validacao::validarCnpj('0987654321123467')){
 				$cont++;
 				$erros[] = 'CNPJ Invalido';
 			}

@@ -12,7 +12,7 @@ class ClienteDAO{
 	
 	public function cadastrarCliente($cli){
 		try{
-			$stat=$this->conexao->prepare("insert into clientes(idCliente,nome,razaoSocial,endereco,cnpj,telefone1,telefone2,email,site,obs)values(null,?,?,?,?,?,?,?,?,?)");
+			$stat=$this->conexao->prepare("insert into clientes(idCliente,nome,razaoSocial,cnpj,endereco,telefone1,telefone2,email,site,obs)values(null,?,?,?,?,?,?,?,?,?)");
 			$stat->bindValue(1,$cli->nome);
 			$stat->bindValue(2,$cli->razaoSocial);
 			$stat->bindValue(3,$cli->cnpj);

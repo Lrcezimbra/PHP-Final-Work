@@ -19,13 +19,13 @@ class Validacao{
 		}//fecha else
 	}//fecha validarRazaoSocial
 	
-	public static function validarCnpj($cnpj){	
-		$exp = '/^(|.{5,200})$/';
+	public static function validarCnpj($valor){	
+		$exp = '/^(|[0-9.-\/]{14,18})$/';
 		if(preg_match($exp,$valor)){
 			return true;
 		}else{
 			return false;			
-		}//fecha else		
+		}//fecha else
 	}//fecha validarCnpj
 	
 	public static function validarEndereco($valor){
@@ -47,7 +47,7 @@ class Validacao{
 	}//fecha validarTelefone
 	
 	public static function validarEmail($valor){
-		if($valor=='' | filter_var($valor, FILTER_VALIDATE_EMAIL)){
+		if($valor=='' || filter_var($valor, FILTER_VALIDATE_EMAIL)){
 			return true;
 		}else{
 			return false;			
@@ -55,7 +55,7 @@ class Validacao{
 	}//fecha validarEmail
 	
 	public static function validarSite($valor){
-		if($valor=='' | filter_var($valor, FILTER_VALIDATE_URL)){
+		if($valor=='' || filter_var($valor, FILTER_VALIDATE_URL)){
 			return true;
 		}else{
 			return false;			
