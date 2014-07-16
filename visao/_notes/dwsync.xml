@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="guihome.html" server="C:/wamp/www/final/" local="130291845830459133" remote="130291845830000000" />
-<file name="guicadcliente.php" server="C:/wamp/www/final/" local="130291926802192233" remote="130291926800000000" />
-<file name="guidetalhes.php" server="C:/wamp/www/final/" local="130292095867826724" remote="130292095860000000" />
+<file name="guicadcliente.php" server="C:/wamp/www/final/" local="130292946118725429" remote="130292946110000000" />
+<file name="guidetalhes.php" server="C:/wamp/www/final/" local="130292946073662852" remote="130292946070000000" />
+<file name="guihome.php" server="C:/wamp/www/final/" local="130292945610846380" remote="130292945610000000" />
+<file name="guifuncionarios.php" server="C:/wamp/www/final/" local="130292945697411331" remote="130292945690000000" />
+<file name="guieventos.php" server="C:/wamp/www/final/" local="130292945745604088" remote="130292945740000000" />
+<file name="guierro.php" server="C:/wamp/www/final/" local="130292948601037409" remote="130292948600000000" />
+<file name="guieditfuncionario.php" server="C:/wamp/www/final/" local="130292945853090236" remote="130292945850000000" />
+<file name="guieditevento.php" server="C:/wamp/www/final/" local="130292945899972917" remote="130292945890000000" />
+<file name="guieditcliente.php" server="C:/wamp/www/final/" local="130292945940995264" remote="130292945940000000" />
+<file name="guidetalhesfuncionario.php" server="C:/wamp/www/final/" local="130292945989118016" remote="130292945980000000" />
+<file name="guidetalhesevento.php" server="C:/wamp/www/final/" local="130292946024760055" remote="130292946020000000" />
 </dwsync>

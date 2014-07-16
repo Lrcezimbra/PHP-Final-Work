@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	if(isset($_SESSION['privateUser'])){
+?>
 <!DOCTYPE html>
 <html><!-- InstanceBegin template="/Templates/funcionarios.dwt" codeOutsideHTMLIsLocked="false" -->
     <head>
@@ -178,3 +182,8 @@
         
     </body>
 <!-- InstanceEnd --></html>
+<?php
+}else{
+header('location:../index.php');
+}    
+?>

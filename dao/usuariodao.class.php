@@ -1,7 +1,14 @@
 <?php
 include_once '../modelo/usuario.class.php';
+include_once '../persistencia/conexaobanco.class.php';
 
-class User{
+class UsuarioDAO{
+	
+	private $conexao=null;
+	
+	public function __construct(){
+		$this->conexao = ConexaoBanco::getInstancia();
+	}//fecha __construct
 	
 	public function verificarUsuario($u){
 		try{

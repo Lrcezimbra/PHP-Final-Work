@@ -13,12 +13,16 @@ if(isset($_GET['op'])){
 			   isset($_POST['pwSenha'])){
 			   
 			   $cont=0;
-			   if(!Validacao::validarLogin($_POST['txtlogin'])){
+			   $erros = array();
+			   
+			   if(!Validacao::validarLogin($_POST['txtLogin'])){
 			 	 $cont++;
+				 $erros[] = 'Login invalido';
 			   }
 				
-			   if(!Validacao::validarSenha($_POST['txtsenha'])){
+			   if(!Validacao::validarSenha($_POST['pwSenha'])){
 			   	 $cont++;
+				 $erros[] = 'senha invalida';
 			   }
 				
 				if($cont==0){
@@ -36,8 +40,6 @@ if(isset($_GET['op'])){
 					ControleLogin::logar($usuario);
 					
 				}else{
-					$erros = array();
-					$erros[] = 'Login/senha invalidos';
 					$_SESSION['erros'] = $erros;
 					header('location:../visao/guierro.php');
 				}

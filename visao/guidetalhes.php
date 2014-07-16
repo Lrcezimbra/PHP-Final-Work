@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	if(isset($_SESSION['privateUser'])){
+?>
 <!DOCTYPE html>
 <html><!-- InstanceBegin template="/Templates/cliente.dwt" codeOutsideHTMLIsLocked="false" -->
     <head>
@@ -28,7 +32,7 @@
                     <span>|</span>
                     <a href="#">Profile Settings</a>
                     <span>|</span>
-                    <a href="#">Log out</a>
+                    <a href="../controle/usuariocontrole.php?op=deslogar">Log out</a>
                 </div>
             </div>
             <!-- End Logo + Top Nav -->
@@ -179,3 +183,8 @@
         
     </body>
 <!-- InstanceEnd --></html>
+<?php
+}else{
+header('location:../index.php');
+}    
+?>

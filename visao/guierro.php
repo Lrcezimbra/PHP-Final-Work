@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['privateUser'])){
 ?>
 <!DOCTYPE html>
 <html><!-- InstanceBegin template="/Templates/template4.dwt" codeOutsideHTMLIsLocked="false" -->
@@ -79,9 +80,7 @@
 								}//fecha forearch
 								unset($_SESSION['erros']);
 							}else{
-								echo 'else';
-							}
-							?>
+						?>
 						</p>
                         <a href="javascript:window.history.go(-1)">Voltar</a>                        
                       <!-- InstanceEndEditable -->
@@ -111,3 +110,8 @@
         
     </body>
 <!-- InstanceEnd --></html>
+<?php
+}else{
+header('location:../index.php');
+}    
+?>
