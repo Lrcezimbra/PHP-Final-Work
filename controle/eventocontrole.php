@@ -107,7 +107,7 @@ if(isset($_GET['op'])){
 				$ev->descricao = $_POST['txtDescricao'];
 				$ev->local = $_POST['txtLocal'];
 				$ev->data = Util::juntar($_POST['selDia'],$_POST['selMes'],$_POST['selAno']);
-				//$ev->horario = $_POST['telTelefone1'];
+				$ev->horario = $_POST['txtHorario'];
 				$ev->obs = $_POST['txtObs'];
 				
 				$evDAO = new EventoDAO();

@@ -10,7 +10,9 @@ class ControleLogin{
 			$_SESSION['privateUser']=serialize($usuario);
 			header('location:../visao/guihome.php'); 
 		}else{
-			$_SESSION['erros']='login/senha invalidos';
+			$erros = array();
+			$erros[] = 'login/senha invalidos';
+			$_SESSION['erros']= $erros;
 			header('location:../visao/guierro.php');
 		}//fecha else
 	}//fecha método
