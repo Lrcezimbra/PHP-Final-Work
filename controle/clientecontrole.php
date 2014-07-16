@@ -12,47 +12,47 @@ if(isset($_GET['op'])){
 			$erros = array();
 			if(!Validacao::validarNome($_POST['txtNome'])){
 				$cont++;
-				$erros = 'Nome Invalido';
+				$erros[] = 'Nome Invalido';
 			}
 			
 			if(!Validacao::validarRazaoSocial($_POST['txtRazaoSocial'])){
 				$cont++;
-				$erros = 'Razao Social Invalido';
+				$erros[] = 'Razao Social Invalido';
 			}
 			
 			if(!Validacao::validarCnpj($_POST['txtCnpj'])){
 				$cont++;
-				$erros = 'CNPJ Invalido';
+				$erros[] = 'CNPJ Invalido';
 			}
 			
 			if(!Validacao::validarEndereco($_POST['txtEndereco'])){
 				$cont++;
-				$erros = 'Endereco Invalido';
+				$erros[] = 'Endereco Invalido';
 			}
 			
 			if(!Validacao::validarTelefone($_POST['telTelefone1'])){
 				$cont++;
-				$erros = 'Telefone 1 Invalido';
+				$erros[] = 'Telefone 1 Invalido';
 			}
 			
 			if(!Validacao::validarTelefone($_POST['telTelefone2'])){
 				$cont++;
-				$erros = 'Telefone 2 Invalido';
+				$erros[] = 'Telefone 2 Invalido';
 			}
 			
 			if(!Validacao::validarEmail($_POST['email'])){
 				$cont++;
-				$erros = 'Email Invalido';
+				$erros[] = 'Email Invalido';
 			}
 			
 			if(!Validacao::validarSite($_POST['urlSite'])){
 				$cont++;
-				$erros = 'Site Invalido';
+				$erros[] = 'Site Invalido';
 			}
 			
 			if(!Validacao::validarObs($_POST['txtObs'])){
 				$cont++;
-				$erros = 'Obsservacao Invalida';
+				$erros[] = 'Obsservacao Invalida';
 			}
 			
 			if($cont==0){
@@ -74,6 +74,7 @@ if(isset($_GET['op'])){
 				header('location:../visao/guicadcliente.php');
 			}else{
 				$_SESSION['erros'] = $erros;
+				header('location:../visao/guierro.php');
 			}
 		break;
 
@@ -88,47 +89,47 @@ if(isset($_GET['op'])){
 			$erros = array();
 			if(!Validacao::validarNome($_POST['txtNome'])){
 				$cont++;
-				$erros = 'Nome Invalido';
+				$erros[] = 'Nome Invalido';
 			}
 			
 			if(!Validacao::validarRazaoSocial($_POST['txtRazaoSocial'])){
 				$cont++;
-				$erros = 'Razao Social Invalido';
+				$erros[] = 'Razao Social Invalido';
 			}
 			
 			if(!Validacao::validarCnpj($_POST['txtCnpj'])){
 				$cont++;
-				$erros = 'CNPJ Invalido';
+				$erros[] = 'CNPJ Invalido';
 			}
 			
 			if(!Validacao::validarEndereco($_POST['txtEndereco'])){
 				$cont++;
-				$erros = 'Endereco Invalido';
+				$erros[] = 'Endereco Invalido';
 			}
 			
 			if(!Validacao::validarTelefone($_POST['telTelefone1'])){
 				$cont++;
-				$erros = 'Telefone 1 Invalido';
+				$erros[] = 'Telefone 1 Invalido';
 			}
 			
 			if(!Validacao::validarTelefone($_POST['telTelefone2'])){
 				$cont++;
-				$erros = 'Telefone 2 Invalido';
+				$erros[] = 'Telefone 2 Invalido';
 			}
 			
 			if(!Validacao::validarEmail($_POST['email'])){
 				$cont++;
-				$erros = 'Email Invalido';
+				$erros[] = 'Email Invalido';
 			}
 			
 			if(!Validacao::validarSite($_POST['urlSite'])){
 				$cont++;
-				$erros = 'Site Invalido';
+				$erros[] = 'Site Invalido';
 			}
 			
 			if(!Validacao::validarObs($_POST['txtObs'])){
 				$cont++;
-				$erros = 'Obsservacao Invalida';
+				$erros[] = 'Obsservacao Invalida';
 			}
 			
 			if($cont==0){
@@ -149,6 +150,7 @@ if(isset($_GET['op'])){
 				header('location:../visao/guicadcliente.php');
 			}else{
 				$_SESSION['erros'] = $erros;
+				header('location:../visao/guierro.php');
 			}
 		break;
 		

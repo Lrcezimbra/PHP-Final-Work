@@ -140,7 +140,7 @@
                        <form action="../controle/clientecontrole.php?op=cadastrar" method="post">
                             <!-- Form -->
                             <div class="form">
-                            	<label>Nome: </label><input type="text" name="txtNome" placeholder="Nome" class="field size1"/><br />
+                            	<label>*Nome: </label><input type="text" name="txtNome" placeholder="Nome" class="field size1"/><br />
                                 <label>Raz&atilde;o Social: </label><input type="text" name="txtRazaoSocial" placeholder="Raz&atilde;o Social" class="field size1"/><br />
                                 <label>CNPJ: </label><input type="teste" name="txtCnpj" placeholder="CNPJ" class="field size1"/><br />
                                 <label>Endere&ccedil;o: </label><input type="text" name="txtEndereco" placeholder="Endere&ccedil;o" class="field size1"/><br />

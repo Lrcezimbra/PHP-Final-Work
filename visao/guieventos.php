@@ -137,7 +137,7 @@
                         <form action="../controle/eventocontrole.php?op=cadastrar" method="post">
                           <!-- Form -->
                           <div class="form">
-                            <label>Nome: </label>
+                            <label>*Nome: </label>
                             <input type="text" name="txtNome" placeholder="Nome" class="field size1"/>
                             <br />
                             <label>Descri&ccedil;&atilde;: </label>

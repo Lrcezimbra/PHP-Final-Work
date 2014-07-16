@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html><!-- InstanceBegin template="/Templates/template4.dwt" codeOutsideHTMLIsLocked="false" -->
     <head>
@@ -68,9 +71,19 @@
                     <!-- Table -->
                     <div class="table">
                       <!-- InstanceBeginEditable name="erro" -->
+						<p>
 						<?php
-                        	
-                        ?>
+							if(isset($_SESSION['erros'])){
+								foreach($_SESSION['erros'] as $e){
+									echo '<br />'.$e;
+								}//fecha forearch
+								unset($_SESSION['erros']);
+							}else{
+								echo 'else';
+							}
+							?>
+						</p>
+                        <a href="javascript:window.history.go(-1)">Voltar</a>                        
                       <!-- InstanceEndEditable -->
                     </div>
                     <!-- Table -->
