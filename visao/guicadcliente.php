@@ -26,12 +26,6 @@
             <div id="top">
                 <h1><a href="#">SpringTime</a></h1>
                 <div id="top-navigation">
-                    Bem Vindo <a href="#"><strong>Administrator</strong></a>
-                    <span>|</span>
-                    <a href="#">Help</a>
-                    <span>|</span>
-                    <a href="#">Profile Settings</a>
-                    <span>|</span>
                     <a href="../controle/usuariocontrole.php?op=deslogar">Log out</a>
                 </div>
             </div>
@@ -40,7 +34,7 @@
             <!-- Main Nav -->
             <div id="navigation">
                 <ul>
-                    <li><a href="guihome.html"><span>Home</span></a></li>
+                    <li><a href="guihome.php"><span>Home</span></a></li>
                     <li><a href="guicadcliente.php" class="active"><span>Clientes</span></a></li>
                     <li><a href="guifuncionarios.php"><span>Funcionários</span></a></li>
                     <li><a href="guieventos.php"><span>Eventos</span></a></li>
@@ -68,13 +62,6 @@
                         <!-- Box Head -->
                         <div class="box-head">
                             <h2 class="left">Clientes</h2>
-                            <div class="right">
-                                <form action="../controle/clientecontrole.php?op=buscar" method="post">
-                                	<label>Pesquisar</label>
-                                    <input type="text" name="txtBusca" class="field small-field" />
-                                    <input type="submit" class="button" value="buscar" />
-								</form>
-                            </div>
                         </div>
                         <!-- End Box Head -->	
     

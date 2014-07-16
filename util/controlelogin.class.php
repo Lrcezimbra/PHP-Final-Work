@@ -10,20 +10,20 @@ class ControleLogin{
 			$_SESSION['privateUser']=serialize($usuario);
 			header('location:../visao/guihome.php'); 
 		}else{
-			$_SESSION['msg']='login/senha invalidos';
-			header('location:../visao/guihome.php');
+			$_SESSION['erros']='login/senha invalidos';
+			header('location:../visao/guierro.php');
 		}//fecha else
 	}//fecha método
 	
 	public static function deslogar(){
 		unset($_SESSION['privateUser']);
-		$_SESSION['msg'] = 'voce foi deslogado';
+		$_SESSION['erros'] = 'voce foi deslogado';
 		header('location:../visao/guihome.php');
 	}
 	
 	public static function verificarAcesso(){
 		if(!isset($_SESSION['privateUser'])){
-			$_SESSION['msg'] = 'voce nao esta logado';
+			$_SESSION['erros'] = 'voce nao esta logado';
 			header('location:../visao/guihome.php');
 		}//fecha if
 	}//fecha método

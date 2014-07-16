@@ -26,13 +26,7 @@ if(!isset($_SESSION['privateUser'])){
             <div id="top">
                 <h1><a href="#">SpringTime</a></h1>
                 <div id="top-navigation">
-                    Bem Vindo <a href="#"><strong>Administrator</strong></a>
-                    <span>|</span>
-                    <a href="#">Help</a>
-                    <span>|</span>
-                    <a href="#">Profile Settings</a>
-                    <span>|</span>
-                    <a href="#">Log out</a>
+                    <a href="../controle/usuariocontrole.php?op=deslogar">Log out</a>
                 </div>
             </div>
             <!-- End Logo + Top Nav -->
@@ -40,7 +34,7 @@ if(!isset($_SESSION['privateUser'])){
             <!-- Main Nav -->
             <div id="navigation">
                 <ul>
-                    <li><a href="guihome.html"><span>Home</span></a></li>
+                    <li><a href="guihome.php"><span>Home</span></a></li>
                     <li><a href="guicadcliente.php"><span>Clientes</span></a></li>
                     <li><a href="guifuncionarios.php"><span>Funcionários</span></a></li>
                     <li><a href="guieventos.php" class="active"><span>Eventos</span></a></li>
@@ -67,11 +61,6 @@ if(!isset($_SESSION['privateUser'])){
                     <!-- Box Head -->
                     <div class="box-head">
                       <h2 class="left">Eventos</h2>
-                      <div class="right">
-                        <label>Pesquisar</label>
-                        <input type="text" class="field small-field" />
-                        <input type="submit" class="button" value="search" />
-                      </div>
                     </div>
                     <!-- End Box Head -->
                     <!-- Table -->

@@ -18,13 +18,7 @@
                 <div id="top">
                     <h1><a href="#">SpringTime</a></h1>
                     <div id="top-navigation">
-                        Bem Vindo <a href="#"><strong>Administrator</strong></a>
-                        <span>|</span>
-                        <a href="#">Help</a>
-                        <span>|</span>
-                        <a href="#">Profile Settings</a>
-                        <span>|</span>
-                        <a href="#">Log out</a>
+                   		<a href="../controle/usuariocontrole.php?op=deslogar">Log out</a>
                     </div>
                 </div>
                 <!-- End Logo + Top Nav -->
@@ -68,9 +62,7 @@
 				    }else if(isset($_SESSION['msg'])){
 						echo $_SESSION['msg'];
 						unset($_SESSION['msg']);
-					}else{
-	 	 				echo 'variavel de sessão não encontrada!';
-				    }
+					}
 					?>	
                 </div>
             </div>

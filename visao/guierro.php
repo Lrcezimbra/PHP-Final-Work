@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(!isset($_SESSION['privateUser'])){
+//	if(isset($_SESSION['privateUser'])){
 ?>
 <!DOCTYPE html>
 <html><!-- InstanceBegin template="/Templates/template4.dwt" codeOutsideHTMLIsLocked="false" -->
@@ -26,13 +26,7 @@
             <div id="top">
                 <h1><a href="#">SpringTime</a></h1>
                 <div id="top-navigation">
-                    Bem Vindo <a href="#"><strong>Administrator</strong></a>
-                    <span>|</span>
-                    <a href="#">Help</a>
-                    <span>|</span>
-                    <a href="#">Profile Settings</a>
-                    <span>|</span>
-                    <a href="#">Log out</a>
+                    <a href="../controle/usuariocontrole.php?op=deslogar">Log out</a>
                 </div>
             </div>
             <!-- End Logo + Top Nav -->
@@ -40,7 +34,7 @@
             <!-- Main Nav -->
             <div id="navigation">
                 <ul>
-                    <li><a href="guihome.html"><span>Home</span></a></li>
+                    <li><a href="guihome.php"><span>Home</span></a></li>
                     <li><a href="guicadcliente.php"><span>Clientes</span></a></li>
                     <li><a href="guifuncionarios.php" class="active"><span>Funcionários</span></a></li>
                     <li><a href="guieventos.php"><span>Eventos</span></a></li>
@@ -79,7 +73,7 @@
 									echo '<br />'.$e;
 								}//fecha forearch
 								unset($_SESSION['erros']);
-							}else{
+							}
 						?>
 						</p>
                         <a href="javascript:window.history.go(-1)">Voltar</a>                        
@@ -111,7 +105,7 @@
     </body>
 <!-- InstanceEnd --></html>
 <?php
-}else{
-header('location:../index.php');
-}    
+//}else{
+//header('location:../index.php');
+//}    
 ?>

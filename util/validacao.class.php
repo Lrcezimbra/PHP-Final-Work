@@ -89,6 +89,15 @@ class Validacao{
 		}//fecha else
 	}//fecha validarRg
 	
+	public static function validarCpf($valor){
+		$exp = '/^(|[0-9.-]{9,20})$/';
+		if(preg_match($exp,$valor)){
+			return true;
+		}else{
+			return false;			
+		}//fecha else
+	}//fecha validarCpf
+	
 	public static function validarDescricao($valor){
 		$exp = '/^.{0,500}$/';
 		if(preg_match($exp,$valor)){
