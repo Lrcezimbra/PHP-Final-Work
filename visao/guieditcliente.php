@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<html><!-- InstanceBegin template="/Templates/cliente.dwt" codeOutsideHTMLIsLocked="false" -->
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <title>Sistema do Lucas</title>
@@ -65,9 +65,11 @@
                         <div class="box-head">
                             <h2 class="left">Clientes</h2>
                             <div class="right">
-                                <label>Pesquisar</label>
-                                <input type="text" class="field small-field" />
-                                <input type="submit" class="button" value="search" />
+                                <form action="../controle/clientecontrole.php?op=buscar" method="post">
+                                	<label>Pesquisar</label>
+                                    <input type="text" name="txtBusca" class="field small-field" />
+                                    <input type="submit" class="button" value="buscar" />
+								</form>
                             </div>
                         </div>
                         <!-- End Box Head -->	

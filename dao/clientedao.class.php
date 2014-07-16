@@ -88,8 +88,7 @@ class ClienteDAO{
 			$this->conexao = null;
 		}catch(PDOException $e){
 			echo 'erro ao atualizar';	
-		}
-}
+		}//fecha catch
+	}//fecha atualizarCliente
 }//fecha classe
-
 ?>

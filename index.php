@@ -6,11 +6,11 @@
     
     <body>
     	<fieldset><legend>Login</legend>
-        	<form action="visao/guihome.html" method="post">
+        	<form action="controle/usuariocontrole.php?op=logar" method="post">
             	<label>Login: </label><input type="text" name="txtLogin" placeholder="Login"/><br />
                 <label>Senha: </label><input type="password" name="pwSenha" placeholder="Senha"/><br />
                 
-                <input type="submit" value="Cadastrar" />
+                <input type="submit" value="Logar" />
 			</form>
 		</fieldset>
     </body>

@@ -81,12 +81,65 @@ class Validacao{
 	}//fecha validarSalario
 	
 	public static function validarRg($valor){
-
+		$exp = '/^(|[0-9]{5,15})$/';
 		if(preg_match($exp,$valor)){
 			return true;
 		}else{
 			return false;			
 		}//fecha else
 	}//fecha validarRg
+	
+	public static function validarDescricao($valor){
+		$exp = '/^.{0,500}$/';
+		if(preg_match($exp,$valor)){
+			return true;
+		}else{
+			return false;			
+		}//fecha else
+	}//fecha validarDescricao
+	
+	public static function validarLocal($valor){
+		$exp = '/^.{0,200}$/';
+		if(preg_match($exp,$valor)){
+			return true;
+		}else{
+			return false;			
+		}//fecha else
+	}//fecha validarLocal
+	
+	public static function validarData($d,$m,$a){
+		if(checkdate($m,$d,$a)){
+			return true;
+		}else{
+			return false;			
+		}//fecha else
+	}//fecha validarData
+
+	public static function validarHorario($valor){
+		$exp = '/^[0-9:]{0,6}$/';
+		if(preg_match($exp,$valor)){
+			return true;
+		}else{
+			return false;			
+		}//fecha else
+	}//fecha validarHorario
+	
+	public static function validarLogin($valor){
+		$exp='/^.{5,48}$/';
+		if(preg_match($exp,$valor)){
+			return true;
+		}else{
+			return false;
+		}//fecha else
+	}//fecha método
+	
+	public static function validarSenha($valor){
+		$exp='/^.{6,48}$/';
+		if(preg_match($exp,$valor)){
+			return true;
+		}else{
+			return false;
+		}//fecha else
+	}//fecha método
 }//fecha classe
 ?>

@@ -7,5 +7,13 @@ class Util{
 		
 		return implode('-',$array);
 	}//fecha juntar
+	
+	public static function retirarEspacos($valor){
+		return trim($valor);
+	}//fecha método
+	
+	public static function escaparAspas($valor){
+		return addslashes($valor);
+	}//fecha método
 }//fecha classe
 ?>

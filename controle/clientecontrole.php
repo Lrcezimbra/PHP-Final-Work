@@ -20,7 +20,7 @@ if(isset($_GET['op'])){
 				$erros[] = 'Razao Social Invalido';
 			}
 			
-			if(!Validacao::validarCnpj('0987654321123467')){
+			if(!Validacao::validarCnpj($_POST['txtCnpj'])){
 				$cont++;
 				$erros[] = 'CNPJ Invalido';
 			}
@@ -153,7 +153,7 @@ if(isset($_GET['op'])){
 				header('location:../visao/guierro.php');
 			}
 		break;
-		
+			
 		default:
 			echo 'opção invalida';		
 		break;
