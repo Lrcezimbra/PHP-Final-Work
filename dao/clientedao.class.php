@@ -71,7 +71,7 @@ class ClienteDAO{
 	
 	public function atualizarCliente($idCliente,$cli){
 		try{
-			$stat = $this->conexao->query("update clientes set nome=Adobe,razaoSocial='Adobe LTDA',cnpj='?',telefone1='?',telefone2='?',email=?,site=?,obs='?' where idCliente=?");
+			$stat = $this->conexao->prepare("update clientes set nome=?,razaoSocial=?,cnpj=?,telefone1=?,telefone2=?,email=?,site=?,obs=? where idCliente=?");
 			$stat->bindValue(1,$cli->nome);
 			$stat->bindValue(2,$cli->razaoSocial);
 			$stat->bindValue(3,$cli->cnpj);

@@ -113,8 +113,8 @@
 											echo '<td>'.$c->telefone2.'</td>';
 											echo '<td>'.$c->email.'</td>';
 											echo '<td>'.$c->site.'</td>';
-											echo '<td><a onclick=\'deletarCliente('.$c->idCliente.',"'.$c->nome.'")\' class=\'ico del\'>';
-											echo 'Delete</a><a href="#" class="ico edit">Edit</a></td>';
+											echo '<td><a onclick=\'deletarCliente('.$c->idCliente.',"'.$c->nome.'")\' class=\'ico del\'>Delete</a>';
+											echo '<a href="'."guiedit.php?idCliente=$c->idCliente".'" class="ico edit">Edit</a></td>';
 										echo '</tr>';
 									}//fecha foreach
 									
@@ -132,11 +132,11 @@
                     <div class="box">
                         <!-- Box Head -->
                         <div class="box-head">
-                            <h2>Novo Cliente</h2>
+                            <h2>Editar Cliente</h2>
                         </div>
                         <!-- End Box Head -->
 						<?php
-						echo '<form action="../controle/clientecontrole.php?op=editar&id="'.$_GET['idCliente'].'" method="post">
+						echo '<form action="../controle/clientecontrole.php?op=editar&idCliente='.$_GET['idCliente'].'" method="post">
                            	  <!-- Form -->
                               <div class="form">';
 							  
@@ -145,7 +145,6 @@
 								$cliDAO = new ClienteDAO();
 								$dados = array();
 								$dados = $cliDAO->selecionarCliente($_GET['idCliente']);
-								var_dump($dados);
 								
 								foreach($dados as $d){
 									echo '<label>Nome: </label><input type="text" name="txtNome" placeholder="Nome" class="field size1" value="'.$d->nome.'"/><br />

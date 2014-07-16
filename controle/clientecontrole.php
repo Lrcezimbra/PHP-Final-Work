@@ -44,8 +44,13 @@ if(isset($_GET['op'])){
 			$cli->site = $_POST['urlSite'];
 			$cli->obs = $_POST['txtObs'];
 			
+			$idCliente = $_GET['idCliente'];
+			
+			echo '<br />Id CLiente: '.$idCliente;
+			echo $cli;
+			
 			$cliDAO = new ClienteDAO();
-			$cliDAO->atualizarCliente($_GET['idCliente'],$cli);
+			$cliDAO->atualizarCliente($idCliente,$cli);
 			header('location:../visao/guicadcliente.php');
 		break;
 		
