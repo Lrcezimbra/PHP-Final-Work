@@ -37,10 +37,8 @@ if(isset($_GET['op'])){
 			//$ev->horario = $_POST['telTelefone1'];
 			$ev->obs = $_POST['txtObs'];
 			
-			$idEvento = $_GET['idEvento'];
-			
 			$evDAO = new EventoDAO();
-			$evDAO->atualizarEvento($idEvento,$ev);
+			$evDAO->atualizarEvento($_GET['idEvento'],$ev);
 			header('location:../visao/guieventos.php');
 		break;
 		

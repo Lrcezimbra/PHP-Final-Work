@@ -36,12 +36,10 @@
             <!-- Main Nav -->
             <div id="navigation">
                 <ul>
-                  <!-- InstanceBeginEditable name="Menu" -->
                     <li><a href="guihome.html"><span>Home</span></a></li>
                     <li><a href="guicadcliente.php" class="active"><span>Clientes</span></a></li>
-                    <li><a href="guicadfuncionario.html"><span>Funcionários</span></a></li>
+                    <li><a href="guifuncionarios.php"><span>Funcionários</span></a></li>
                     <li><a href="guieventos.php"><span>Eventos</span></a></li>
-                  <!-- InstanceEndEditable -->
                 </ul>
           </div>
             <!-- End Main Nav -->
