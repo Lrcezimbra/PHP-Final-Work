@@ -11,6 +11,10 @@ body {
 #bemvindo{margin:auto;
 }
 
+.form .detalhes{font-size:16px;
+line-height:30px;
+}
+
 #bemvindo h1{color:#000;
 font-weight:bold;
 margin-left:450px;

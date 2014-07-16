@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <title>Sistema do Lucas</title>
@@ -36,12 +36,14 @@
             <!-- Main Nav -->
             <div id="navigation">
                 <ul>
+                  <!-- InstanceBeginEditable name="Menu" -->
                     <li><a href="guihome.html"><span>Home</span></a></li>
                     <li><a href="guicadcliente.php" class="active"><span>Clientes</span></a></li>
                     <li><a href="guicadfuncionario.html"><span>Funcionários</span></a></li>
                     <li><a href="guieventos.html"><span>Eventos</span></a></li>
+                  <!-- InstanceEndEditable -->
                 </ul>
-            </div>
+          </div>
             <!-- End Main Nav -->
         </div>
     </div>
@@ -107,20 +109,20 @@
 									
 									foreach($dados as $c){
 										echo '<tr>';
-											echo '<td><a href="#">'.$c->nome.'</a></td>';
+											echo '<td><a href="guidetalhes.php?idCliente='.$c->idCliente.'">'.$c->nome.'</a></td>';
 											echo '<td>'.$c->razaoSocial.'</td>';
 											echo '<td>'.$c->telefone1.'</td>';
 											echo '<td>'.$c->telefone2.'</td>';
 											echo '<td>'.$c->email.'</td>';
 											echo '<td>'.$c->site.'</td>';
-											echo '<td><a onclick=\'deletarCliente('.$c->idCliente.',"'.$c->nome.'")\' class=\'ico del\'>Delete</a>';
-											echo '<a href="'."guiedit.php?idCliente=$c->idCliente".'" class="ico edit">Edit</a></td>';
+											echo '<td><a onclick=\'deletarCliente('.$c->idCliente.',"'.$c->nome.'")\' class=\'ico del\'>Excluir</a>';
+											echo '<a href="'."guiedit.php?idCliente=$c->idCliente".'" class="ico edit">Editar</a></td>';
 										echo '</tr>';
 									}//fecha foreach
 									
                                     ?>
 								</tbody>
-                            </table>
+                          </table>
                         
                         </div>
                         <!-- Table -->
@@ -131,6 +133,7 @@
                     <!-- Box -->
                     <div class="box">
                         <!-- Box Head -->
+                        <!-- InstanceBeginEditable name="Conteudo" -->
                         <div class="box-head">
                             <h2>Editar Cliente</h2>
                         </div>
@@ -156,7 +159,7 @@
 									<label>Email: </label><input type="email" name="email" placeholder="Email" class="field size1" value="'.$d->email.'"/><br />
 									<label>Site: </label><input type="url" name="urlSite" placeholder="Site" class="field size1" value="'.$d->site.'"/><br />
 									<label>Observações: </label><br />
-									<textarea name="txtObs" class="field size1" rows="10" cols="30" value="'.$d->obs.'"></textarea>';
+									<textarea name="txtObs" class="field size1" rows="10" cols="30">'.$d->obs.'</textarea>';
 								}
 								?>
                                 <br />                  
@@ -170,7 +173,7 @@
                             </div>
                             <!-- End Form Buttons -->
                         </form>
-                    </div>
+                      <!-- InstanceEndEditable --></div>
                     <!-- End Box -->
     
                 </div>
@@ -194,4 +197,4 @@
     <!-- End Footer -->
         
     </body>
-</html>
+<!-- InstanceEnd --></html>

@@ -23,7 +23,7 @@ class Cliente{
 	}//fecha __set
 	
 	public function __toString(){
-		return '<br />ID Cliente: '.$this->idCliente.
+		return 'ID Cliente: '.$this->idCliente.
 			   '<br />Nome: '.$this->nome.
 			   '<br />Raz&atilde;o Social: '.$this->razaoSocial.
 			   '<br />CNPJ: '.$this->cnpj.

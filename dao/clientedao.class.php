@@ -12,15 +12,16 @@ class ClienteDAO{
 	
 	public function cadastrarCliente($cli){
 		try{
-			$stat=$this->conexao->prepare("insert into clientes(idCliente,nome,razaoSocial,cnpj,telefone1,telefone2,email,site,obs)values(null,?,?,?,?,?,?,?,?)");
+			$stat=$this->conexao->prepare("insert into clientes(idCliente,nome,razaoSocial,endereco,cnpj,telefone1,telefone2,email,site,obs)values(null,?,?,?,?,?,?,?,?,?)");
 			$stat->bindValue(1,$cli->nome);
 			$stat->bindValue(2,$cli->razaoSocial);
 			$stat->bindValue(3,$cli->cnpj);
-			$stat->bindValue(4,$cli->telefone1);
-			$stat->bindValue(5,$cli->telefone2);
-			$stat->bindValue(6,$cli->email);
-			$stat->bindValue(7,$cli->site);
-			$stat->bindValue(8,$cli->obs);
+			$stat->bindValue(4,$cli->endereco);
+			$stat->bindValue(5,$cli->telefone1);
+			$stat->bindValue(6,$cli->telefone2);
+			$stat->bindValue(7,$cli->email);
+			$stat->bindValue(8,$cli->site);
+			$stat->bindValue(9,$cli->obs);
 			$stat->execute();
 			
 			$this->conexao = null;
@@ -71,16 +72,17 @@ class ClienteDAO{
 	
 	public function atualizarCliente($idCliente,$cli){
 		try{
-			$stat = $this->conexao->prepare("update clientes set nome=?,razaoSocial=?,cnpj=?,telefone1=?,telefone2=?,email=?,site=?,obs=? where idCliente=?");
+			$stat = $this->conexao->prepare("update clientes set nome=?,razaoSocial=?,cnpj=?,endereco=?,telefone1=?,telefone2=?,email=?,site=?,obs=? where idCliente=?");
 			$stat->bindValue(1,$cli->nome);
 			$stat->bindValue(2,$cli->razaoSocial);
 			$stat->bindValue(3,$cli->cnpj);
-			$stat->bindValue(4,$cli->telefone1);
-			$stat->bindValue(5,$cli->telefone2);
-			$stat->bindValue(6,$cli->email);
-			$stat->bindValue(7,$cli->site);
-			$stat->bindValue(8,$cli->obs);
-			$stat->bindValue(9,$idCliente);
+			$stat->bindValue(4,$cli->endereco);
+			$stat->bindValue(5,$cli->telefone1);
+			$stat->bindValue(6,$cli->telefone2);
+			$stat->bindValue(7,$cli->email);
+			$stat->bindValue(8,$cli->site);
+			$stat->bindValue(9,$cli->obs);
+			$stat->bindValue(10,$idCliente);
 			$stat->execute();
 			
 			$this->conexao = null;
