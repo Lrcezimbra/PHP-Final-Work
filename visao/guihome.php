@@ -26,7 +26,7 @@
                 <!-- Main Nav -->
                 <div id="navigation">
                     <ul>
-                        <li><a href="guihome.php" class="active"><span>Home</span></a></li>
+                        <li><a href="guihome.html" class="active"><span>Home</span></a></li>
                         <li><a href="guicadcliente.php"><span>Clientes</span></a></li>
                         <li><a href="guifuncionarios.php"><span>Funcionários</span></a></li>
                         <li><a href="guieventos.php"><span>Eventos</span></a></li>
