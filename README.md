@@ -1,7 +1,7 @@
 PHP-Final-Work
 ==============
 
-An simple project that I have, it's my Hello World to GitHub.
+An simple old project that I have, it's my Hello World to GitHub.
 Is a simple website with login to register clients, employees and events.
 I used a template to HTML and CSS and made the server-side with PHP.
 
