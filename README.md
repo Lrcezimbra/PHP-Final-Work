@@ -1,11 +1,11 @@
 PHP-Final-Work
 ==============
 
-An simple project that I have, is my Hello World to GitHub.
+An simple project that I have, it's my Hello World to GitHub.
 Is a simple website with login to register clients, employees and events.
-Was made with PHP(object-oriented) and MVC.
+I used a template to HTML and CSS and made the server-side with PHP.
 
-I had many folders backup, joined them and publish here. Each folder is a commit
+I had many folders backup, joined them and publish here. Each folder is a commit.
 
 
 This is the URL where the website is deployed:
